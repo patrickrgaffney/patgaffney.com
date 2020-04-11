@@ -135,3 +135,21 @@ h1, h2, h3, h4, h5, h6 {
   color: #4F5B66;
   font-weight: 1000;
 }
+
+code {
+  font-family: "Menlo", "Lucida Console", monospace;
+  background-color: #CCCCCC;
+  padding: 2px 5px;
+  font-size: 15px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+  font-size: calc(100% - 2px);
+}

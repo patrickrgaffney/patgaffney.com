@@ -1,11 +1,11 @@
-{% import "header.html" as header %}
+{% import "head.html" as head %}
 
 {% set title = "Pat Gaffney &gg;" ~ term.name %}
 {% set desc = "Pat Gaffney's web log" %}
 
 <!DOCTYPE html>
 <html lang="en-US">
-  {{ header::generate(title=title, desc=desc) }}
+  {{ head::generate(title=title, desc=desc) }}
   <body>
     <header class="site-header">
       <h1 class="site-title">

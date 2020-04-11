@@ -153,3 +153,12 @@ h5 code,
 h6 code {
   font-size: calc(100% - 2px);
 }
+
+pre {
+  padding: 15px;
+  border-radius: 3px;
+  font-family: "Menlo", "Lucida Console", monospace;
+  overflow-x: scroll;
+  background-color: #2b303b;
+  color: #c0c5ce;
+}

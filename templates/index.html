@@ -17,10 +17,15 @@
       <p>
         I’m Pat Gaffney, a software engineer in St. Louis. I studied computer science at a small college you’ve never heard of. Now I work as a <a href="https://www.ocelotconsulting.com/">software consultant</a> in the St. Louis area, primarily doing cloud application development. Before that, I wrote full-stack applications for a giant agricultural company. I write here from time to time about programming and open source projects I'm working on.
       </p>
+
+      {% set blog = get_section(path="blog/_index.md") %}
       <h2>Recent Posts</h2>
       <ul>
-        <li>list here</li>
+      {% for post in blog.pages %}
+        <li><a href="{{post.permalink}}">{{post.title}}</a></li>
+      {% endfor %}
       </ul>
+
       <h2>Elsehwere</h2>
       <p>I exist elsewhere on the internet:</p>
       <ul>
@@ -30,12 +35,8 @@
         <li><a href="https://letterboxd.com/hypepat/">@hypepat on letterboxd</a></li>
         <li><a href="https://www.goodreads.com/hypepat">@patrickrgaffney on GoodReads</a></li>
       </ul>
-      <p>
-        Or, you could <a href="mailto:pat@hypepat.com">email me</a>.
-      </p>
-      <p>
-        Thanks for reading.
-      </p>
+      <p>Or, you could <a href="mailto:pat@hypepat.com">email me</a>.</p>
+      <p>Thanks for reading.</p>
     </main>
     <script>
       const img = document.getElementById('portrait')

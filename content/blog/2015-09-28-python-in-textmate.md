@@ -18,7 +18,7 @@ TextMate ships with a [Python bundle][python-bundle], and it contains a multitud
 
 TextMate will parse the first line of your Python script for a [shebang][shebang] sequence.  If found, it will attempt to call that interpreter when you run your script.  I have installed Python 3 using [homebrew][brew], so the binary is in my `/usr/local/bin` folder.  Lets set up a simple script and test this:
 
-```python
+```py
 #!/usr/local/bin/python3
 print('hello, hypepat!')
 ```
@@ -39,7 +39,7 @@ First some background: TextMate uses [environment variables][mate-envs] to provi
 
 Now, if we were to do some digging into the internals of the Python bundle, [^py-bundle] we will find a Ruby script that is called every time we run our code.  Line #13 of that script actually calls the Python interpreter to run our script, and the code looks alot like the following:
 
-```ruby
+```rb
 TextMate::Executor.run(ENV["TM_PYTHON"] || "python", "-u", ENV["TM_FILEPATH"] ...
 ```
 
@@ -57,7 +57,7 @@ Virtual environments work by **prefixing** your `$PATH` shell variable with the 
 
 So, lets backtrack a bit and re-examine that shebang line.  We can change it from `/usr/local/bin/python3`, the absolute path, to `/usr/bin/env python3`, the environment variable.
 
-```python
+```py
 #!/usr/bin/env python3
 print('hello, hypepat!')
 ```

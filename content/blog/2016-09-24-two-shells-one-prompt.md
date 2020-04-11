@@ -531,6 +531,8 @@ This is pretty great. Now I have the majority of my zsh functionality back, and 
 
 All of my bash startup files &mdash; along with a slew of other dotfiles I use &mdash; are in [my dotfiles repository on Github][dotfiles].
 
+---
+
 [^zsh-alts]: There are oh-my-zsh alternatives, namely [Prezto][prezto]. It was actually a fork of oh-my-zsh that was later rewritten to focus on performance. But if I am going to *really* buy-in on zsh, I should either hunker down and learn the configurations or stick with oh-my-zsh.
 
 [^fish]: Anyone who has ever tried to use the [fish shell][fish] can attest to the importance of your daily shell playing-nice with bash. This *is* a deal breaker.

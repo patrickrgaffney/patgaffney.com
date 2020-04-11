@@ -102,6 +102,7 @@ There are [tons of possible settings][tm-settings], and if you're short on ideas
 
 Using these settings files we can pin down the exact location of our python interpreter, without listing an absolute path in the shebang line.  This also keeps us from manually changing our `TM_PYTHON` static variable each time we switch virtual environments.  The creation of these files can even be strung together with the `virtualenv` command to create a virtual environment and specify the settings for the editor all in one command.
 
+---
 
 [^commands]: Which, after having a look at some of the [competition][choc], is TextMate's biggest draw for me to continue using it even after its... [retirement][death-of-TM]? Hell, I'm not even sure what to call it.
 
@@ -143,5 +144,5 @@ Using these settings files we can pin down the exact location of our python inte
 [tm-defaults]: http://wiki.macromates.com/Reference/FolderSpecificSettings
 [venv-wrap]: http://virtualenvwrapper.readthedocs.org/en/latest/
 
-[hello]: /assets/hello_hypepat.png
-[tm-path-error]: /assets/mate_path_error.png
+[hello]: /images/hello_hypepat.png
+[tm-path-error]: /images/mate_path_error.png

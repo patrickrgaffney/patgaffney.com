@@ -1,12 +1,14 @@
----
-title: Two Shells and A Prompt
-slug: two-shells-one-prompt
-layout: post
-date: 2016-09-24
-tags: [bash, zsh, git]
-published: true
-summary: Lessons learned from ditching zsh, coming home to bash, and writing a bash prompt.
----
++++
+title = "Two Shells and A Prompt"
+summary = "Lessons learned from ditching zsh, coming home to bash, and writing a bash prompt."
+slug = "two-shells-one-prompt"
+date = "2016-09-24"
+draft = false
+template = "post.html"
+
+[taxonomies]
+  tags = ["bash", "zsh", "git"]
++++
 
 I recently made the switch back to [bash][bash] after a long spell with [zsh][zsh]. I'm a little conflicted, but there were three driving factors in my breakup with zsh:
 

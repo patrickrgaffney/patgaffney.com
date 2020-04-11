@@ -79,6 +79,12 @@ img#portrait {
   margin-left: 20px;
 }
 
+div.about-wrapper {
+  border: 5px solid #65737E;
+  border-radius: 3px;
+  padding: 0px 20px;
+}
+
 ul.posts-list {
   margin: 0;
   padding-left: 20px;

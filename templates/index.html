@@ -1,4 +1,5 @@
 {% import "head.html" as head %}
+{% import "about.html" as about %}
 
 {% set title = "Pat Gaffney" %}
 {% set desc = "Pat Gaffney's web log" %}
@@ -13,10 +14,7 @@
       {% set irish_kevins = get_url(path="images/irish-kevins.jpg") %}
       {% set pat = get_url(path="images/pat.jpg") %}
 
-      <p><img id="portrait" src="{{ archer }}" alt="archer" /></p>
-      <p>
-        I’m Pat Gaffney, a software engineer in St. Louis. I studied computer science at a small college you’ve never heard of. Now I work as a <a href="https://www.ocelotconsulting.com/">software consultant</a> in the St. Louis area, primarily doing cloud application development. Before that, I wrote full-stack applications for a giant agricultural company. I write here from time to time about programming and open source projects I'm working on.
-      </p>
+      {{ about::generate() }}
 
       {% set blog = get_section(path="blog/_index.md") %}
       <h2>Recent Posts</h2>

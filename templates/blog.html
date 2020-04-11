@@ -1,4 +1,5 @@
 {% import "head.html" as head %}
+{% import "about.html" as about %}
 
 {% set title = "Pat Gaffney ≫ Posts" %}
 {% set desc = "Pat Gaffney's web log" %}
@@ -25,6 +26,8 @@
         </li>
       {% endfor %}
       </ul>
+      
+      {{ about::generate(border=true) }}
     </main>
     {% include "footer.html" %}
   </body>

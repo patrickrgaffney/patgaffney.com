@@ -79,6 +79,25 @@ img#portrait {
   margin-left: 20px;
 }
 
+ul.posts-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+ul.posts-list li {
+  list-style: none;
+  margin-bottom: 25px;
+}
+
+div.post-date,
+div.post-desc {
+  font-size: 14px;
+}
+
+a.post-link {
+  font-size: 20px;
+}
+
 a {
   color: #6699CC;
   text-decoration: none;

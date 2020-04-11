@@ -20,9 +20,13 @@
 
       {% set blog = get_section(path="blog/_index.md") %}
       <h2>Recent Posts</h2>
-      <ul>
+      <ul class="posts-list">
       {% for post in blog.pages %}
-        <li><a href="{{post.permalink}}">{{post.title}}</a></li>
+        <li>
+          <div class="post-date">{{post.date}}</div>
+          <a class="post-link" href="{{post.permalink}}">{{post.title}}</a>
+          <div class="post-desc">{{post.description}}</div>
+        </li>
       {% endfor %}
       </ul>
 

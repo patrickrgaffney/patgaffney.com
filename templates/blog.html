@@ -21,7 +21,7 @@
           
           <div class="post-tag-wrapper">
           {% for tag in post.taxonomies["tags"] %}
-            <a href=""><span class="post-tag">{{ tag }}</span></a>
+            <a href="{{ config.base_url ~ "/tags/" ~ tag}}"><span class="post-tag">{{ tag }}</span></a>
           {% endfor %}
           </div>  
         </li>

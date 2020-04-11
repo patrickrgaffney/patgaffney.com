@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    {% set css = get_url(path="css/app.css") %}
+    <title>Pat Gaffney</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="author" content="Pat Gaffney" />
+    <meta name="description" content="Pat Gaffney's web log." />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://patgaffney.com" />
+    <meta property="og:title" content="Pat Gaffney" />
+    <meta property="og:image" content="http://patgaffney.com/assets/pictures/archer.jpg" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@patrickrgaffney" />
+    <meta name="twitter:title" content="Pat Gaffney's web log" />
+    <meta name="twitter:image" content="http://patgaffney.com/assets/pictures/archer.jpg" />
+
+    <link rel="stylesheet" type="text/css" href="{{ css | safe }}" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1 class="site-title">
+        <a href="/">pat gaffney</a>
+      </h1>
+      <nav>
+        <ul class="header-links">
+          <li>
+            <a href="/posts">posts</a>
+          </li>
+          <li>
+            <a href="#">projects</a>
+          </li>
+          <li>
+            <a href="#">feed</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      {% set archer = get_url(path="images/archer.jpg") %}
+      {% set irish_kevins = get_url(path="images/irish-kevins.jpg") %}
+      {% set pat = get_url(path="images/pat.jpg") %}
+
+      <p><img id="portrait" src="{{ archer }}" alt="archer" /></p>
+      <p>
+        I’m Pat Gaffney, a software engineer in St. Louis. I studied computer science at a small college you’ve never heard of. Now I work as a <a href="https://www.ocelotconsulting.com/">software consultant</a> in the St. Louis area, primarily doing cloud application development. Before that, I wrote full-stack applications for a giant agricultural company. I write here from time to time about programming and other things that spark my interests.
+      </p>
+      <h2>Recent Posts</h2>
+      <ul>
+        <li>list here</li>
+      </ul>
+      <h2>Elsehwere</h2>
+      <p>
+        I exist elsewhere on the internet:
+      </p>
+      <ul>
+        <li>
+          <a href="https://github.com/patrickrgaffney">@patrickrgaffney on Github</a>
+        </li>
+        <li>
+          <a href="https://lobste.rs/u/hypepat">@hypepat on lobste.rs</a>
+        </li>
+        <li>
+          <a href="https://twitter.com/patrickrgaffney">@patrickrgaffney on Twitter</a>
+        </li>
+        <li>
+          <a href="https://letterboxd.com/hypepat/">@hypepat on letterboxd</a>
+        </li>
+        <li>
+          <a href="https://www.goodreads.com/hypepat">@patrickrgaffney on GoodReads</a>
+        </li>
+      </ul>
+      <p>
+        Or, you could <a href="mailto:pat@hypepat.com">email me</a>.
+      </p>
+      <p>
+        Thanks for reading.
+      </p>
+    </main>
+    <script>
+      const img = document.getElementById('portrait')
+
+      if (img) {
+        const changeImage = () => {
+          const chance = Math.floor(Math.random() * 10)
+          img.src = chance === 0 || chance === 9
+            ? "{{ irish_kevins | safe }}"
+            : "{{ pat | safe }}"
+        }
+        const changeBack = () => img.src = "{{ archer | safe }}"
+        
+        img.onmouseover = changeImage
+        img.onmouseout = changeBack
+        img.onclick = changeImage
+      }
+    </script>
+    <footer>
+      <p>
+        © 2020 Pat Gaffney • Licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/">Create Commons</a> • This better not be a ruse.
+      </p>
+    </footer>
+  </body>
+</html>

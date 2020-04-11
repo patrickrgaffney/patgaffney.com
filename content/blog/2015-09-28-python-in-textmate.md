@@ -2,7 +2,7 @@
 title = "Python in TextMate 2"
 description = "Get your Python virtual environments working in TextMate 2."
 slug = "python-in-textmate"
-date = "2015-09-28"
+date = 2015-09-28
 draft = false
 template = "post.html"
 

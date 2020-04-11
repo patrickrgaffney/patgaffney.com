@@ -95,8 +95,8 @@ ul.posts-list li {
   margin-bottom: 25px;
 }
 
-div.post-date,
-div.post-desc {
+.post-date,
+.post-desc {
   font-size: 14px;
 }
 
@@ -115,6 +115,10 @@ span.post-tag {
 div.post-tag-wrapper a {
   text-decoration: none;
   font-weight: 400;
+}
+
+h1.post-title {
+  margin-bottom: 0;
 }
 
 a {

@@ -1,4 +1,5 @@
 {% import "head.html" as head %}
+{% import "about.html" as about %}
 
 {% set title = page.title ~ " · Pat Gaffney"  %}
 
@@ -8,7 +9,15 @@
   <body>
     {% include "header.html" %}
     <main>
-      {{ page.content }}
+      <h1 class="post-title">{{ page.title | safe }}</h1>
+
+      <span class="post-date">Posted on {{ page.date }} in </span>
+      {% for tag in page.taxonomies["tags"] %}
+        <a href="{{ config.base_url ~ "/tags/" ~ tag}}"><span class="post-tag">{{ tag }}</span></a>
+      {% endfor %}
+
+      {{ page.content | safe }}
+      {{ about::generate(border=true) }}
     </main>
     {% include "footer.html" %}
   </body>

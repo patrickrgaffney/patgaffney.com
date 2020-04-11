@@ -16,13 +16,9 @@ I recently made the switch back to [bash][bash] after a long spell with [zsh][zs
 
 Lets start with the first point. [A lot][zsh-slow] of people [have written][zsh-slow2] about why they think zsh is slow. [Most of the time][zsh-slow3] it's a combination of oh-my-zsh and overweight startup files. I could use zsh without oh-my-zsh, but that seems unreasonable. If I disable oh-my-zsh, I am going to end up rebuilding a lot of its functionality &mdash; and it will probably be half-assed in comparison. [^zsh-alts] And it's not just the startup time, I often find myself *waiting* on the completions after triggering them. Is this worth the in-buffer command highlighting?
 
-[^zsh-alts]: There are oh-my-zsh alternatives, namely [Prezto][prezto]. It was actually a fork of oh-my-zsh that was later rewritten to focus on performance. But if I am going to *really* buy-in on zsh, I should either hunker down and learn the configurations or stick with oh-my-zsh.
-
 Point number two: bash is literally everywhere. Bash is already on both of the servers I pay for. When I am am forced to use a computer at my college &mdash; *first I find a Mac* &mdash; bash is already there when I launch the terminal. When I have to `ssh` into the universities Linux servers to turn in projects, I am greeted with a friendly `bash4.2$` prompt. Bash is the air we breathe, it's the dirt beneath our feet. It's practically a given that it will be on any UNIX system you can find *and* it will be the default shell. Even Windows [has bash now][windows]!
 
 Bash is also the standard for writing shell scripts. If you reach a point where you or an application running needs to execute a series of commands, there is a 95% chance that it is a bash script. This doesn't necessarily mean I have to break-up with zsh, there is actually a lot of interoperability between the two [^fish]. The problem is that I often find myself needing to change some part or parts of these scripts. It usually goes something like this:
-
-[^fish]: Anyone who has ever tried to use the [fish shell][fish] can attest to the importance of your daily shell playing-nice with bash. This *is* a deal breaker.
 
 - Open the script in TextMate.
 - Slowly search for the command that needs to be changed or updated.
@@ -52,8 +48,6 @@ Alright, now we have bash 4.4. But we have a long way to go before this is a rep
 ## Bash: A Graphic Novel
 
 When I decided to venture out into these uncharted waters, the first thing I did was search for a reference manual for bash. What do you know, one of those exists and it's written by the current and long time maintainer [Chet Ramey][chet]. You can find it on a [single webpage][bash-ref-html], a [single PDF][bash-ref-pdf], or a [series of bounded dead tress][bash-ref-trees] [^trees]. I opted for the dead trees, because I am a heartless bastard who loves highlighting things and reaching for books when I want answers.
-
-[^trees]: Currently bash 4.4 has no dead tree version. So your stuck with reading the release notes for the latest features, like an animal.
 
 Over a string of weekends I read this reference manual. This shouldn't come as a surprise to anyone, but it is **not** a particularly compelling read. It's called *Bash 4.3: Reference Manual* after all, not *Bash 4.3: A Graphic Novel*. Nonetheless it was enlightening. Chapter 6 of this manual deals with features specific to bash, and this is where I'll begin.
 
@@ -115,8 +109,6 @@ In true UNIX fashion, you can use `set` in two different ways:
 I'm going to use the first option for this, because I'm not an animal.
 
 Bash comes with about half of the `set` options turned on by default, and they're fairly sensible choices. There are two additional settings I have decided to toggle. The first, `ignoreeof`, prevents an interactive shell from exiting upon reading `EOF`. This is infinitely useful if you have ever written very buggy C code [^c-code] &mdash; you end up pounding on Control-D until your keyboard breaks. The second, `notify`, prints the status of completed background jobs immediately, instead of waiting for the next prompt.
-
-[^c-code]: Commonly referred to as just "C code".
 
 Finally, we actually have something in our `.bashrc`:
 
@@ -208,8 +200,6 @@ export GLOBIGNORE='.DS_Store:*.o:*.pyc'
 
 Finally, lets add color to the output of the `ls` command. There is a caveat however &mdash; this is mostly OS-dependent. In other words, because `ls` is not built into bash, it is included with the operating system and therefore differs depending on who wrote the utility. I am going to cover the `ls` included on macOS [^bsd].
 
-[^bsd]: Apple uses the BSD utilities, so any BSD system should operate the same.
-
 To enable colored output on `ls`, you need to do either of these two things:
 
 - Supply the `-G` option to `ls` every time you use it (or set an alias).
@@ -218,8 +208,6 @@ To enable colored output on `ls`, you need to do either of these two things:
 Since either of these options will work, I'll just set the `CLICOLOR` variable so I can move on with my life.
 
 Just telling `ls` to use colors is not enough though, you need to tell it *which* colors to use [^ls]. This is done by setting the `LSCOLORS` variable to a ridiculous string of characters, each of which corresponds to a file type, foreground color, and background color.
-
-[^ls]: All of this is contingent on your terminal being able to display colors, which is the default on most terminals today.
 
 This sounds really convoluted &mdash; and it is &mdash; so my advice would be to use an [excellent tool made by Geoff Greer][ls-colors] to generate this string for you. My settings are below.
 
@@ -543,8 +531,19 @@ This is pretty great. Now I have the majority of my zsh functionality back, and 
 
 All of my bash startup files &mdash; along with a slew of other dotfiles I use &mdash; are in [my dotfiles repository on Github][dotfiles].
 
-[^highlight]: This is pretty much impossible to do with bash. Zsh has [its own library][zshline] for command line buffers that enables this feature.
+[^zsh-alts]: There are oh-my-zsh alternatives, namely [Prezto][prezto]. It was actually a fork of oh-my-zsh that was later rewritten to focus on performance. But if I am going to *really* buy-in on zsh, I should either hunker down and learn the configurations or stick with oh-my-zsh.
 
+[^fish]: Anyone who has ever tried to use the [fish shell][fish] can attest to the importance of your daily shell playing-nice with bash. This *is* a deal breaker.
+
+[^trees]: Currently bash 4.4 has no dead tree version. So your stuck with reading the release notes for the latest features, like an animal.
+
+[^c-code]: Commonly referred to as just "C code".
+
+[^bsd]: Apple uses the BSD utilities, so any BSD system should operate the same.
+
+[^ls]: All of this is contingent on your terminal being able to display colors, which is the default on most terminals today.
+
+[^highlight]: This is pretty much impossible to do with bash. Zsh has [its own library][zshline] for command line buffers that enables this feature.
 
 [bash]: http://tiswww.case.edu/php/chet/bash/bashtop.html
 [zsh]: http://zsh.sourceforge.net

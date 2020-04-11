@@ -9,7 +9,22 @@
   <body>
     {% include "header.html" %}
     <main>
-      {{ section.content }}
+      <h2>All Posts</h2>
+      <ul class="posts-list">
+      {% for post in section.pages %}
+        <li>
+          <div class="post-date">{{post.date}}</div>
+          <a class="post-link" href="{{post.permalink}}">{{post.title}}</a>
+          <div class="post-desc">{{post.description}}</div>
+          
+          <div class="post-tag-wrapper">
+          {% for tag in post.taxonomies["tags"] %}
+            <a href=""><span class="post-tag">{{ tag }}</span></a>
+          {% endfor %}
+          </div>  
+        </li>
+      {% endfor %}
+      </ul>
     </main>
     {% include "footer.html" %}
   </body>

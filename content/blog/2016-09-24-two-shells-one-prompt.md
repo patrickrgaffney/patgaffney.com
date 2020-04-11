@@ -398,9 +398,8 @@ export PROMPT_DIRTRIM=3
 
 Which gives me:
 
-<div class="highlight"><pre><span class="kc">25. </span><span class="gs">patrickrgaffney</span>@<span class="nf">patmac</span> in <span class="nt gs">~/Code/dotfiles</span> at <span class="s gs">17:11</span>
+<pre><span style="font-weight: 700; color:#d08770;">25. </span><span style="font-weight: 700;">pat</span>@<span style="font-weight: 700; color:#8fa1b3;">patmac</span> in <span style="font-weight: 700; color:#bf616a;">~/Code/dotfiles</span> at <span style="font-weight: 700; color:#a3be8c;">17:11</span>
 $</pre>
-</div>
 
 So far, so good.
 
@@ -523,9 +522,8 @@ This time `git_branch()` calls `git_dirty()` to get the color of the branch name
 
 The final prompt:
 
-<div class="highlight"><pre><span class="kc">25. </span><span class="gs">patrickrgaffney</span>@<span class="nf">patmac</span> in <span class="nt gs">~/Code/dotfiles</span>:[<span class="s">master</span>] at <span class="s gs">17:11</span>
+<pre><span style="font-weight: 700; color:#d08770;">25. </span><span style="font-weight: 700;">pat</span>@<span style="font-weight: 700; color:#8fa1b3;">patmac</span> in <span style="font-weight: 700; color:#bf616a;">~/Code/dotfiles</span>:[<span style="color:#a3be8c;">master</span>] at <span style="font-weight: 700; color:#a3be8c;">17:11</span>
 $</pre>
-</div>
 
 This is pretty great. Now I have the majority of my zsh functionality back, and it's all in a single bash startup file. The only major differences now are the in-buffer command highlighting [^highlight] and the completions &mdash; bash does allow you to write your own programmable completions.
 

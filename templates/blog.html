@@ -7,18 +7,7 @@
 <html lang="en-US">
   {{ head::generate(title=title, desc=desc) }}
   <body>
-    <header class="site-header">
-      <h1 class="site-title">
-        <a href="/">pat gaffney</a>
-      </h1>
-      <nav>
-        <ul class="header-links">
-          <li><a href="/posts">posts</a></li>
-          <li><a href="#">projects</a></li>
-          <li><a href="#">feed</a></li>
-        </ul>
-      </nav>
-    </header>
+    {% include "header.html" %}
     <main>
       {{ section.content }}
     </main>

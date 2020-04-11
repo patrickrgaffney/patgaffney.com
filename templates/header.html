@@ -1,0 +1,30 @@
+{% macro generate(title, desc) %}
+  <head>
+    {% set css = get_url(path="css/app.css") %}
+    {% set archer = get_url(path="images/archer.jpg") %}
+    {% set rss = get_url(path="rss.xml") %}
+
+    <title>{{ title }}</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="author" content="Pat Gaffney" />
+    <meta name="description" content="{{ desc }}" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://patgaffney.com" />
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:description" content="{{ desc }}" />
+    <meta property="og:image" content="{{ archer | safe }}" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@patrickrgaffney" />
+    <meta name="twitter:title" content="{{ title }}" />
+    <meta name="twitter:description" content="{{ desc }}" />
+    <meta name="twitter:image" content="{{ archer | safe }}" />
+
+    <link rel="stylesheet" type="text/css" href="{{ css | safe }}" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href={{ rss | safe}} />
+  </head>
+{% endmacro generate %}

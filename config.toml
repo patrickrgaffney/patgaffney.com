@@ -27,7 +27,9 @@ generate_rss = true
 hard_link_static = false
 
 # The taxonomies to be rendered for the site and their configuration.
-taxonomies = []
+taxonomies = [
+  { name = "tags" }
+]
 
 # The additional languages for the site.
 languages = []

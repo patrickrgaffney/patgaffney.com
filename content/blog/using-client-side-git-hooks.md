@@ -116,4 +116,4 @@ If for some reason shell scripts aren't your thing, no worries, you can write yo
 
 Client-side hooks are ideal for these types of repetitive tasks: linters, tests, formatting merge commits, and so on. They provide a benefit best served over time &mdash; our team's `pre-commit` hooks keep our code in a consistent, working state.
 
-> The script written in this post was improved upon in a [second post](@/blog/2018-03-05-using-client-side-git-hooks-2.md).
+> The script written in this post was improved upon in a [second post](@/blog/using-client-side-git-hooks-2.md).

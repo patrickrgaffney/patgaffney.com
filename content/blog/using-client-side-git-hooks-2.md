@@ -1,5 +1,5 @@
 +++
-title = "Client Side Git Hooks - Part 2"
+title = "Using Client Side Git Hooks - Part 2"
 description = "Improving your version control workflow."
 slug = "using-client-side-git-hooks-part-2"
 date = 2018-03-05
@@ -10,7 +10,7 @@ taxonomies.tags = ["git", "bash"]
 
 > This post was originally written for the [Monsanto Engineering Blog](http://engineering.monsanto.com/2018/03/05/using-client-side-git-hooks-2/), which is where I worked at the time.
 
-[Last year I wrote](@/blog/2017-05-17-using-client-side-git-hooks.md) about how my team was using client-side [git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) to run sanity checks on our code before we commit. The example from last year was a pre-commit hook designed to perform static analysis on Javascript code using ESLint. One year later and we're still using them everyday, but we've made a few improvements to make the experience a whole lot smoother.
+[Last year I wrote](@/blog/using-client-side-git-hooks.md) about how my team was using client-side [git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) to run sanity checks on our code before we commit. The example from last year was a pre-commit hook designed to perform static analysis on Javascript code using ESLint. One year later and we're still using them everyday, but we've made a few improvements to make the experience a whole lot smoother.
 
 Let's walk through the problems we ran into over the past year, and the solutions we came up with. 
 

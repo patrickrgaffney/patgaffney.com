@@ -1,6 +1,6 @@
 +++
 title = "Two Shells and A Prompt"
-summary = "Lessons learned from ditching zsh, coming home to bash, and writing a bash prompt."
+description = "Lessons learned from ditching zsh, coming home to bash, and writing a prompt."
 slug = "two-shells-one-prompt"
 date = 2016-09-24
 draft = false

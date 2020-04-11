@@ -78,18 +78,15 @@ After opening that file in TextMate, you will see that it has enabled the "TextM
 
 Lets see a simple example:
 
-<div class="highlight">
-<pre>
-<span class="k">TM_PYTHON </span><span class="o">= </span><span class="s">"</span><span class="se">${CWD}</span><span class="s">/venv/bin/python"</span>
-<span class="k">excludeDirectoriesInBrowser </span><span class="o">= </span><span class="s">"{__pycache__,include,lib,bin}"</span>
-<span class="k">includeFilesInBrowser </span><span class="o">= </span><span class="s">"{.gitignore}"</span>
+```toml
+TM_PYTHON = "${CWD}/venv/bin/python"
+excludeDirectoriesInBrowser = "{__pycache__,include,lib,bin}"
+includeFilesInBrowser = "{.gitignore}"
 
-<span class="o">[ </span><span class="sx">source.python</span><span class="o"> ]</span>
-<span class="k">softTabs </span><span class="o">= </span><span class="bp">true</span>
-<span class="k">tabSize  </span><span class="o">= </span><span class="m">4</span>
-</pre>
-</div>
-
+[ source.python ]
+softTabs = true
+tabSize  = 4
+```
 
 The first setting overrides the global `TM_PYTHON` variable we assigned earlier to use an interpreter that is located in a subfolder of our current working directory, or `${CWD}`.  If you are using `virtualenv`, the "venv" folder contains your python interpreter along with all its libraries.  If you name your virtual environments, then this folder will bear that same name.
 

@@ -113,8 +113,8 @@ span.post-tag {
 }
 
 div.post-tag-wrapper a {
-  text-decoration: none;
   font-weight: 400;
+  color: #ffffff;
 }
 
 h1.post-title {

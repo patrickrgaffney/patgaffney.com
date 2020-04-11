@@ -18,7 +18,9 @@
         {% endfor %}
       </div>
 
-      {{ page.content | safe }}
+      <div class="post-content">
+        {{ page.content | safe }}
+      </div>
       {{ about::generate(border=true) }}
     </main>
     {% include "footer.html" %}

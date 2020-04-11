@@ -121,6 +121,10 @@ h1.post-title {
   margin-bottom: 0;
 }
 
+div.post-content {
+  margin-bottom: 25px;
+}
+
 a {
   color: #6699CC;
   text-decoration: none;
@@ -158,7 +162,33 @@ pre {
   padding: 15px;
   border-radius: 3px;
   font-family: "Menlo", "Lucida Console", monospace;
+  font-size: 16px;
   overflow-x: scroll;
   background-color: #2b303b;
   color: #c0c5ce;
+}
+
+hr {
+  border-top: 4px solid #65737E;
+}
+
+.footnote-definition-label {
+  display: inline;
+  font-weight: 700;
+  vertical-align: text-top;
+}
+
+.footnote-definition-label::after {
+  content: " →";
+}
+
+.footnote-definition p {
+  display: inline;
+}
+
+img {
+  display: block;
+  margin: auto;
+  height: auto;
+  max-width: 100%;
 }

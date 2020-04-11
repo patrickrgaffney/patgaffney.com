@@ -7,7 +7,7 @@ description = "Pat Gaffney's web log"
 default_language = "en"
 
 # Theme to use for the site.
-theme = ""
+# theme = ""
 
 # Whether to do syntax highlighting
 highlight_code = true

@@ -1,5 +1,8 @@
 {% macro generate(border=false) %}
   {% set archer = get_url(path="images/archer.jpg") %}
+  {% set irish_kevins = get_url(path="images/irish-kevins.jpg") %}
+  {% set pat = get_url(path="images/pat.jpg") %}
+
   {% if border %}
     <div class="about-wrapper">
   {% endif %}
@@ -12,4 +15,21 @@
   {% if border %}
     </div>
   {% endif %}
+  <script>
+    const img = document.getElementById('portrait')
+
+    if (img) {
+      const changeImage = () => {
+        const chance = Math.floor(Math.random() * 10)
+        img.src = chance === 0 || chance === 9
+          ? "{{ irish_kevins | safe }}"
+          : "{{ pat | safe }}"
+      }
+      const changeBack = () => img.src = "{{ archer | safe }}"
+      
+      img.onmouseover = changeImage
+      img.onmouseout = changeBack
+      img.onclick = changeImage
+    }
+  </script>
 {% endmacro generate %}

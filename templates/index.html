@@ -10,10 +10,6 @@
   <body>
     {% include "header.html" %}
     <main>
-      {% set archer = get_url(path="images/archer.jpg") %}
-      {% set irish_kevins = get_url(path="images/irish-kevins.jpg") %}
-      {% set pat = get_url(path="images/pat.jpg") %}
-
       {{ about::generate() }}
 
       {% set blog = get_section(path="blog/_index.md") %}
@@ -40,23 +36,6 @@
       <p>Or, you could <a href="mailto:pat@hypepat.com">email me</a>.</p>
       <p>Thanks for reading.</p>
     </main>
-    <script>
-      const img = document.getElementById('portrait')
-
-      if (img) {
-        const changeImage = () => {
-          const chance = Math.floor(Math.random() * 10)
-          img.src = chance === 0 || chance === 9
-            ? "{{ irish_kevins | safe }}"
-            : "{{ pat | safe }}"
-        }
-        const changeBack = () => img.src = "{{ archer | safe }}"
-        
-        img.onmouseover = changeImage
-        img.onmouseout = changeBack
-        img.onclick = changeImage
-      }
-    </script>
     {% include "footer.html" %}
   </body>
 </html>

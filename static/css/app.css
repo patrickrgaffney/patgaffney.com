@@ -200,3 +200,23 @@ blockquote {
   border-radius: 3px;
   font-style: italic;
 }
+
+@media (max-width: 600px) {
+  ul.header-links {
+    text-align: center;
+  }
+
+  ul.header-links li {
+    padding: 0 3px;
+  }
+
+  h1.site-title {
+    text-align: center;
+  }
+
+  img#portrait {
+    width: 125px;
+    height: 125px;
+    margin-left: 5px;
+  }
+}

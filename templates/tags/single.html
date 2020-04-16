@@ -9,7 +9,22 @@
   <body>
     {% include "header.html" %}
     <main>
-      {{ term }}
+      <h2>
+        <a class="post-tag" href="{{ term.permalink }}" style="display: block;">
+          {{ term.name }}
+        </a>
+      </h2>
+
+      <ul class="posts-list">
+      <!-- Sort pages chronologically, then reverse the order. -->
+      {% for post in term.pages | sort(attribute="date") | reverse %}
+        <li>
+          <div class="post-date">{{post.date}}</div>
+          <a class="post-link" href="{{post.permalink}}">{{post.title}}</a>
+          <div class="post-desc">{{post.description}}</div>
+        </li>
+      {% endfor %}
+    </ul>
     </main>
     {% include "footer.html" %}
   </body>

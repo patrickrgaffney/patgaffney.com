@@ -13,20 +13,16 @@
       {% for tag in terms | sort(attribute="name") %}
         {% set num_posts = tag.pages | length %}
 
-        <div class="post-tag-wrapper">
-          <h2>
-            <a href="{{ tag.permalink }}">
-              <span class="post-tag">{{ tag.name }}</span>
-            </a>
-            &mdash;
+        <h2>
+          <a class="post-tag" href="{{ tag.permalink }}">{{ tag.name }}</a>
+          &mdash;
 
-            {% if num_posts > 1 %}
-              {{ num_posts }} posts
-            {% else %}
-              {{ num_posts }} post
-            {% endif %}
-          </h2>
-        </div>
+          {% if num_posts > 1 %}
+            {{ num_posts }} posts
+          {% else %}
+            {{ num_posts }} post
+          {% endif %}
+        </h2>
       {% endfor %}
       {{ about::generate(border=true) }}
     </main>

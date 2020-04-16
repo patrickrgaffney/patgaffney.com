@@ -112,12 +112,9 @@ a.post-link {
   border-radius: 3px;
 }
 
-h2.post-tag {
+h2 .post-tag {
+  font-weight: 700;
   font-size: inherit;
-}
-
-h2.post-tag a {
-  color: #ffffff;
 }
 
 div.post-tag-wrapper a {

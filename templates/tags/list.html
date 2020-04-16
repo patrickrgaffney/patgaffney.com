@@ -11,19 +11,22 @@
     {% include "header.html" %}
     <main>
       {% for tag in terms | sort(attribute="name") %}
-        <h2 class="post-tag">
-          <a href="{{ tag.permalink }}">{{ tag.name }}</a>
-        </h2>
+        {% set num_posts = tag.pages | length %}
 
-        <ul class="posts-list">
-        {% for post in tag.pages %}
-          <li>
-            <div class="post-date">{{post.date}}</div>
-            <a class="post-link" href="{{post.permalink}}">{{post.title}}</a>
-            <div class="post-desc">{{post.description}}</div>
-          </li>
-        {% endfor %}
-        </ul>
+        <div class="post-tag-wrapper">
+          <h2>
+            <a href="{{ tag.permalink }}">
+              <span class="post-tag">{{ tag.name }}</span>
+            </a>
+            &mdash;
+
+            {% if num_posts > 1 %}
+              {{ num_posts }} posts
+            {% else %}
+              {{ num_posts }} post
+            {% endif %}
+          </h2>
+        </div>
       {% endfor %}
       {{ about::generate(border=true) }}
     </main>

@@ -14,6 +14,7 @@
 
       {% set blog = get_section(path="blog/_index.md") %}
       <h2>Recent Posts</h2>
+
       <ul class="posts-list">
       {% for post in blog.pages %}
         <li>
@@ -33,6 +34,7 @@
         <li><a href="https://letterboxd.com/hypepat/">@hypepat on letterboxd</a></li>
         <li><a href="https://www.goodreads.com/hypepat">@patrickrgaffney on GoodReads</a></li>
       </ul>
+
       <p>Or, you could <a href="mailto:pat@hypepat.com">email me</a>.</p>
       <p>Thanks for reading.</p>
     </main>

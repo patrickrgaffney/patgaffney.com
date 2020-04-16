@@ -104,12 +104,20 @@ a.post-link {
   font-size: 24px;
 }
 
-span.post-tag {
+.post-tag {
   background-color: #65737E;
   padding: 3px 8px;
   font-size: 12px;
   color: #ffffff;
   border-radius: 3px;
+}
+
+h2.post-tag {
+  font-size: inherit;
+}
+
+h2.post-tag a {
+  color: #ffffff;
 }
 
 div.post-tag-wrapper a {

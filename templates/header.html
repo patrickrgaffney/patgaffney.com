@@ -1,13 +1,17 @@
+{% set blog = get_url(path="@/blog/_index.md") %}
+{% set tags = config.base_url ~ "/tags/" %}
+{% set rss  = config.base_url ~ "/rss.xml" %}
+
 <header class="site-header">
   <h1 class="site-title">
     <a href="/">pat gaffney</a>
   </h1>
   <nav>
     <ul class="header-links">
-      <li><a href="/blog">blog</a></li>
+      <li><a href="{{ blog }}">blog</a></li>
       <li><a href="#">projects</a></li>
-      <li><a href="#">topics</a></li>
-      <li><a href="#">feed</a></li>
+      <li><a href="{{ tags }}">topics</a></li>
+      <li><a href="{{ rss }}">feed</a></li>
     </ul>
   </nav>
 </header>

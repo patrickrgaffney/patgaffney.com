@@ -136,7 +136,7 @@ Using these settings files we can pin down the exact location of our python inte
 [macports]: http://www.macports.org
 [tm-prefs]: http://blog.macromates.com/2011/git-style-configuration/
 [cpython]: https://en.wikipedia.org/wiki/CPython
-[hfiles]: https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory#Mac_OS_X
+[hfiles]: https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory#macOS
 [tm-settings]: http://wiki.macromates.com/Reference/Settings
 [tm-defaults]: http://wiki.macromates.com/Reference/FolderSpecificSettings
 [venv-wrap]: http://virtualenvwrapper.readthedocs.org/en/latest/

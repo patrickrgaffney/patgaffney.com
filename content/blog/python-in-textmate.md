@@ -5,7 +5,7 @@ slug = "python-in-textmate"
 date = 2015-09-28
 draft = false
 template = "post.html"
-taxonomies.tags = ["python", "textmate", "editors"]
+taxonomies.tags = ["python", "textmate"]
 +++
 
 The true dominance of [TextMate][mate] lies in its [bundles][mate-bundles].  No matter what language you prefer to spend your time writing, chances are, there exists a bundle that is feature-packed with the idioms, syntax, and completions of that language.

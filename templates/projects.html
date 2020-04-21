@@ -1,0 +1,21 @@
+{% import "head.html" as head %}
+{% import "about.html" as about %}
+
+{% set title = "Pat Gaffney · Projects" %}
+{% set desc = "Pat Gaffney's projects" %}
+
+<!DOCTYPE html>
+<html lang="en-US">
+  {{ head::generate(title=title, desc=desc) }}
+  <body>
+    {% include "header.html" %}
+    <main>
+      <div class="post-content">
+        {{ section.content | safe }}
+      </div>
+      
+      {{ about::generate(border=true) }}
+    </main>
+    {% include "footer.html" %}
+  </body>
+</html>

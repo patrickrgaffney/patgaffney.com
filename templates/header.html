@@ -1,6 +1,7 @@
-{% set blog = get_url(path="@/blog/_index.md") %}
-{% set tags = config.base_url ~ "/tags/" %}
-{% set rss  = config.base_url ~ "/rss.xml" %}
+{% set blog     = get_url(path="@/blog/_index.md") %}
+{% set tags     = config.base_url ~ "/tags/" %}
+{% set rss      = config.base_url ~ "/rss.xml" %}
+{% set projects = get_url(path="@/projects/_index.md") %}
 
 <header class="site-header">
   <h1 class="site-title">
@@ -9,7 +10,7 @@
   <nav>
     <ul class="header-links">
       <li><a href="{{ blog }}">blog</a></li>
-      <li><a href="#">projects</a></li>
+      <li><a href="{{ projects }}">projects</a></li>
       <li><a href="{{ tags }}">topics</a></li>
       <li><a href="{{ rss }}">feed</a></li>
     </ul>
